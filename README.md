@@ -18,13 +18,13 @@ Prototype expectations:
 
 Please add any PG graph engine you would like to experiment with
 
-#### neo4j
-
-In folder [neo4j-backend](neo4j-backend)
-
 #### dgraph
 
 In folder [dgraph-backend](dgraph-backend)
+
+#### orientdb
+
+In folder [orientdb-backend](orientdb-backend)
 
 ### RDF graph DBs
 
@@ -64,14 +64,15 @@ If you want to experiment with jena-fuzeki & HDT without having to build your HD
 
 ## Json Dumps
 
-Not yet would be great to have a tool that converts RDF dumps into JSON (ndjson format)
+- mediawikiwiki: https://people.wikimedia.org/~dcausse/mediawikiwiki-20211002-categories.json.gz
+
+Please ask if you prefer a bigger/smaller example or convert one yourself using `tools/convert_rdf_to_json.py`.
 
 ## Nice tools to have
 
 See [tools](tools)
 
-- A tool to convert RDF dumps into json dumps (ndjson: one doc per line)
-- A tool
+- convert_rdf_to_json.py: A tool to convert RDF dumps into json dumps (ndjson: one doc per line)
 
 ## Formats and schema
 
@@ -86,6 +87,9 @@ type Category {
 
     """ URL of the category page """
     pageUrl: String!
+    
+    """ category visibility (categories generally not displayed at the end of the page)"""
+    hidden: Boolean!
 
     """ Categories this category belongs to """
     parentCategories: [Category!]!
@@ -105,6 +109,7 @@ Example json doc for dumps:
     "id": "https://commons.wikimedia.org/wiki/Category:Trees",
     "name": "Trees",
     "pageUrl": "https://commons.wikimedia.org/wiki/Category:Trees",
+    "hidden": false,
     "parentCategories": [
         "https://commons.wikimedia.org/wiki/Category:Plants_by_common_named_groups",
         "https://commons.wikimedia.org/wiki/Category:Woody_plants",
