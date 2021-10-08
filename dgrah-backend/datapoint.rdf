@@ -1,0 +1,18 @@
+{
+    set {
+    _:0 <pageUrl> "https://www.mediawiki.org/wiki/Category:MediaWiki_development/ps" .
+    _:0 <name> "Version control/ps" .
+    _:0 <hidden> "false"^^<xs:boolean> .
+    _:0 <numberOfPage> "0"^^<xs:int> .
+    _:0 <numberOfCategories> "1"^^<xs:int> .
+    _:0 <dgraph.type> "Category" .
+
+    _:1 <pageUrl> "https://www.mediawiki.org/wiki/Category:Version_control/ps" .
+    _:1 <name> "Version control/ps" .
+    _:1 <hidden> "false"^^<xs:boolean> .
+    _:1 <numberOfPage> "0"^^<xs:int> .
+    _:1 <numberOfCategories> "1"^^<xs:int> .
+    _:1 <parentCategories> _:0 .
+    _:1 <dgraph.type> "Category" .
+    }
+}

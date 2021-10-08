@@ -1,0 +1,22 @@
+type Category {
+    """ Dgraph generated ID (uid?)"""
+    id: ID!
+
+    """ Name of the page """
+    name: String! @search(by: [exact])
+
+    """ URL of the category page """
+    pageUrl: String! @id
+
+    """ category visibility (categories generally not displayed at the end of the page)"""
+    hidden: Boolean!
+
+    """ Categories this category belongs to """
+    parentCategories: [Category!]!
+
+    """ Number of pages belonging to this category (direct relationships) """
+    numberOfPages: Int!
+
+    """ Number of categories belonging to this category (direct relationships) """
+    numberOfCategories: Int!
+}

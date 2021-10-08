@@ -1,0 +1,14 @@
+{
+    Category(func: eq(pageUrl, "https://www.mediawiki.org/wiki/Category:Top_level/ps")) {
+        uid
+        name
+        parentCategories {
+            uid
+            name
+        }
+        ~parentCategories {
+            uid
+            name
+        }
+    }
+}

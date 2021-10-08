@@ -1,0 +1,3 @@
+name: string @index(exact) .
+pageUrl: string @index(exact) .
+parentCategories: [uid] @reverse .

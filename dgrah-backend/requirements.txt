@@ -1,0 +1,2 @@
+pydgraph>=21
+rdflib>=6.0
